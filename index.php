@@ -356,7 +356,7 @@ foreach ($hautdefrance as $departement){
 Cela pourra être, par exemple, de la forme :
 "Le département" + nom_departement + "a le numéro" + num_departement</p>
 <?php
-foreach ($Hauts_de_france as $cle => $departement){
+foreach ($hautdefrance as $cle => $departement){
   echo 'Le département ' . $departement. ' a le numéro ' .$cle. ' </br>' ;
 }
 ?>
