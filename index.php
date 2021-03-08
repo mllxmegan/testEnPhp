@@ -170,27 +170,27 @@ for ($repetition=1; $repetition<=100; $repetition+=15)
 <h2> EXO 8</h2>
 <p>En allant de 200 à 0 avec un pas de 12, acher le message Enn ! ! !</p>
 <?php
-for ($repetition=200; $repetition>=0; $repetition-=12)
-{
-  echo '<p> Enfin '.$repetition .'</p>';
-};
+for ($repetition = 200; $repetition > 0;) {
+  $repetition= $repetition - 12;
+  echo "<br>$repetition Enfin !";
+}
 ?>
 
 <h1>Les Fonctions</h1>
 <h2>Exo 1</h2>
 <p>Faire une fonction qui retourne true.</p>
-
 <?php
-function age_limit($age)
-{
-    if ($age >= 21) 
-    {
-        $majeur = true;
-        var_dump($majeur);
+function truc() {
+    $firstName = "Barney";
+    $god = true;
+    if ($god == true) {
+        echo "$firstName est le meilleur personnage de tout les temps";
+    }
+    else {
+        echo "Au pire c'est le deuxième devant Abed";
     }
 }
-$age = 30;
-age_limit(true);
+truc();
 ?>
 <h2>Exo2</h2>
 <p> Faire une fonction qui prend en paramètre une chaine de caractères et qui retourne cette même chaine.</p>
@@ -315,7 +315,8 @@ echo $mois[5];
 <h2> Exo 4</h2>
 <p>Avec le tableau de l'exercice 1, modier le mois de aout pour lui ajouter l'accent manquant.</p>
 <?php
-echo $mois[9] ="Août";
+$months[7] = str_replace('u', 'û', 'Aout');
+echo  '<br>' . $months[7] . '<br>';
 ?>
 <h2> Exo 5</h2>
 <p>Créer un tableau associatif avec comme index le numéro des départements
